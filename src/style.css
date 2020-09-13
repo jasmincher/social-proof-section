@@ -1,0 +1,78 @@
+/* Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100&display=swap');
+
+.App {
+  height: 100vh;
+  background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  font-family: 'Spartan', sans-serif;
+}
+
+
+.container{
+  border: 1px solid black;
+  padding: 100px;
+}
+
+.card{
+  /* display: grid;
+  grid-template-areas:
+  'image name name'
+  'image text text'
+  'review review review';
+  line-height: 0; */
+  width: 350px;
+  height: 230px;
+  background: hsl(300, 43%, 22%);
+  border-radius: 8px;
+}
+
+.profile-img{
+  grid-area: image;
+  width: 40px;
+  align-self: center;
+  border-radius: 100%;
+  float: left;
+  /* margin: 10px 20px; */
+  padding: 30px 30px;
+}
+
+.name{
+  margin: 0;
+  color: white;
+  padding-top: 30px;
+  font-size: 15px;
+
+}
+.text{
+  margin: 0;
+
+  color: hsl(333, 80%, 67%);
+
+}
+
+.review{
+  color: white;
+  clear: both;
+  padding: 0 30px;
+}
+
+
+.rating{
+  width: 445px;
+  height: 50px;
+  border-radius: 8px;
+  background: hsl(300, 24%, 96%);
+  color: hsl(300, 43%, 22%);
+}
+
+
