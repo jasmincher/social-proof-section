@@ -1,78 +1,128 @@
-/* Very Dark Magenta: hsl(300, 43%, 22%)
-Soft Pink: hsl(333, 80%, 67%)
-
-### Neutral
-
-Dark Grayish Magenta: hsl(303, 10%, 53%)
-Light Grayish Magenta: hsl(300, 24%, 96%)
-White: hsl(0, 0%, 100%) */
-
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
 .App {
-  height: 100vh;
-  background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
   background-position: top left, bottom right;
   background-repeat: no-repeat, no-repeat;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
 }
 
-
-.container{
-  border: 1px solid black;
-  padding: 100px;
-}
-
-.card{
-  /* display: grid;
+.container {
+  padding: 150px;
+  display: grid;
   grid-template-areas:
-  'image name name'
-  'image text text'
-  'review review review';
-  line-height: 0; */
+    "large-text reviews "
+    "cards cards";
+}
+
+.blurb {
+  grid-area: large-text;
+  color: hsl(300, 43%, 22%);
+  padding-right: 100px;
+}
+
+.blurb h1 {
+  font-size: 45px;
+  line-height: 45px;
+  margin: 0;
+}
+
+.blurb p {
+  line-height: 25px;
+}
+
+.rating-container {
+  grid-area: reviews;
+  
+}
+
+.rating-container .rating:nth-child(2) {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.rating-container .rating:nth-child(3) {
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.card-container {
+  margin-top: 60px;
+  grid-area: cards;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container .card:nth-child(2) {
+  margin-top: 20px;
+}
+
+.card-container .card:nth-child(3) {
+  margin-top: 40px;
+}
+
+
+/* styles for card reviews */
+.card {
   width: 350px;
   height: 230px;
   background: hsl(300, 43%, 22%);
   border-radius: 8px;
+  font-size: 15px;
 }
 
-.profile-img{
+.profile-img {
   grid-area: image;
-  width: 40px;
+  width: 45px;
   align-self: center;
   border-radius: 100%;
   float: left;
-  /* margin: 10px 20px; */
   padding: 30px 30px;
 }
 
-.name{
+.name {
   margin: 0;
   color: white;
-  padding-top: 30px;
-  font-size: 15px;
-
+  padding-top: 35px;
+  font-weight: 700;
 }
-.text{
+.text {
+  padding-top: 5px;
   margin: 0;
-
   color: hsl(333, 80%, 67%);
-
+  font-weight: 400;
 }
 
-.review{
+.review {
   color: white;
   clear: both;
   padding: 0 30px;
+  font-weight: 500;
 }
 
-
-.rating{
+/* styles for 5 star review cards */
+.rating {
   width: 445px;
   height: 50px;
   border-radius: 8px;
   background: hsl(300, 24%, 96%);
   color: hsl(300, 43%, 22%);
+  display: grid;
+  grid-template-columns: 35% 65%;
+  padding: 5px;
+  
 }
 
+.stars {
+  align-self: center;
+  justify-self: center;
+}
 
+.star {
+  margin: 3px;
+}
+
+.rating-review {
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
